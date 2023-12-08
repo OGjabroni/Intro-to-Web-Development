@@ -1,0 +1,277 @@
+@charset "UTF-8"; 
+@import url(normalize.css);
+
+/* CSS Document */
+
+/* Box Sizing Reset */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+CSS JavaScript Open/Close Menu 1 of 3
+Be sure to see the associated .html file for more!
+
+JavaScript will provide ability for 
+user to toggle with clicking the menu button
+between these two states:
+	<nav class="show">
+		and
+	<nav>
+adding/removing the class to the nav tag
+*/
+.show {
+	display: block;
+}
+
+nav {
+	
+	display:none;	
+}
+
+
+body {
+	margin: 0;
+	font-family: 'Cabin', sans-serif;
+	background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+}
+
+
+h1 {
+	margin-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+	line-height: 70px;
+	font-size: 2rem;
+    
+	
+}
+h2{
+    margin: 25px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+
+img{
+	max-width: 100%;
+	height:auto;
+    box-shadow: black 1px 0px 1px 1px;
+}
+a {
+    color:red
+}
+
+a:hover a:active {
+    color:yellow;
+}
+a:visited{
+    color: blue;
+}
+header {
+	background-color: #000000;
+	color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+main {
+    padding: 0px;
+    flex: 1;
+}
+footer {
+	background-color: black;
+	color: white;
+	padding: 16px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: whitesmoke 1px 1px 2px 1px inset;
+    text-align: center;
+
+}
+footer p {
+    margin: 25px;
+}
+section{
+    background-color: #ffffff;
+    padding:5px
+}
+
+article{
+	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+    border: 1px solid orange;
+	padding:5px;
+	margin:5px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top:25px;
+    margin-bottom: 25px;
+   
+}
+figure{
+    display: flex;
+    flex-direction: column;
+}
+figcaption {
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: black 1px 0px 1px 1px;
+  padding: 5px;
+  background-color: #eeeeee;
+}
+
+.btn-menu {
+	display: block;
+	background-color: transparent;
+	border: none;
+	font-size: 1.3rem;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin: 15px;
+}
+#top-bar{
+	
+	display: flex;
+    text-align: center;
+	justify-content: space-between;
+    flex-direction: column;
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+
+.nav-link {
+	display: block;
+	line-height: 40px;
+	text-align: center;
+	color:white;
+	text-decoration: none;
+	font-weight:bold;
+
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+	background-color: rgba(255, 255, 255, 0.425);
+}
+.nav-link:visited{
+    color: #eeeeee;
+}
+.footer-link{
+	text-decoration: none;
+	color: white;
+}
+
+.red {
+    color: red;
+}
+
+.lightblue{
+    color: lightskyblue;
+}
+.yellow{
+    color: yellow;
+
+}
+.orange {
+    color:orange;
+}
+
+#nav-ul{
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+
+#wrapper{
+	
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 1px;
+ 	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+@media (min-width:705px){
+	h1 {
+        padding-left:15px;
+    }
+	.btn-menu {
+		display: none;
+	}
+	
+	nav {
+		display: block;
+	}	
+
+	header{
+		
+		display: flex;
+		
+		justify-content: space-between;
+		
+		align-items: center;
+	}
+
+	#nav-ul{
+		display:flex;
+	}
+	
+	.nav-li a{
+		padding:5px 15px;
+	}	
+
+}	
+
+
+@media (min-width:736px){
+	
+	footer{
+		display: flex;
+		justify-content: space-around;
+	}
+    footer p {
+        margin: 10px
+    }
+    footer a {
+    padding-top: 9px;
+    }
+	
+	article{
+	
+		margin:10px;
+		width:80%;
+	}
+	
+	section{
+		display: flex;
+		flex-direction: column;
+        align-items: center;
+		
+       
+	}
+
+}
+
+
+@media (min-width:1024px){
+	
+	article{
+		
+		width:85% ;
+        margin-top: 35px;
+        margin-bottom: 35px;
+	}
+}

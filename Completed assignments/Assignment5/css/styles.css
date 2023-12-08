@@ -1,0 +1,198 @@
+html {
+	box-sizing: border-box;
+	
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+body{
+    background-color: rgb(11, 2, 62);
+    background-image: url(../img/backgroundmaybe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin:0px;
+    font-family: tahoma, sans-serif;
+    padding: 20px;
+    font-size:1em;
+	font-family: 'Orbitron', sans-serif;
+       
+}
+
+main {
+    padding: 0px;
+    flex: 1;
+}
+
+h2, h3, h4, h5, h6, p {
+	margin-top: 20px;
+    color: whitesmoke;
+}
+h1{
+    padding-top: 40px;
+    margin: 0px;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+section{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+   
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    margin: 5px;
+
+}
+
+a{
+	font-weight:bold;
+	color:rgb(255, 0, 60);
+}
+
+a:hover {
+	color:rgb(234, 0, 255);
+	text-decoration: none;
+}
+a:active{
+    color:rgb(234, 0, 255);
+
+}
+a:visited {
+    color:blue;
+}
+
+header, footer{
+    background-image: url(../img/headerstars.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:whitesmoke;
+    padding:20px 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+img{
+	max-width: 100%;
+	height:auto;
+    border-radius: 15px;
+    margin: 0 auto;
+   
+	
+}
+.container{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex:1;
+    margin: auto 0px;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1024px;
+    margin: auto 0px;
+    align-items: center;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+figcaption{
+    border: whitesmoke solid 1px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    font-size: .5em;
+    padding: 10px;
+}
+#wrapper{
+	
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 1px;
+ 	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#multiple_backgrounds{
+	text-align:center;
+	height:150px;
+	
+}
+
+@media (min-width:400px){
+    figcaption {
+        font-size: .7em;
+    }
+    
+
+}
+@media (min-width:610px){
+    #multiple_backgrounds{
+     
+        background: url(../img/omicronpersi8.png) no-repeat, 
+                    url(../img/happyplanet.png) no-repeat;
+                    
+                    background-position:	right  top 15%, 
+                                            top left;
+                    
+                   
+
+     
+    }
+    figcaption {
+        font-size: .8em;
+    }
+}
+@media (min-width:750px){
+    #multiple_backgrounds{
+     
+        background: url(../img/blueplanet.png) no-repeat, 
+                    url(../img/omicronpersi8.png) no-repeat, 
+                    url(../img/happyplanet.png) no-repeat;
+        
+        background-position:	center bottom, 
+                                right 12% top 15%, 
+                                top left;
+                                
+                   
+
+     
+    }
+    
+    
+}
+@media (min-width:1024px){
+    #multiple_backgrounds{
+     
+        background: url(../img/17xo.png) no-repeat,
+                    url(../img/blueplanet.png) no-repeat, 
+                    url(../img/omicronpersi8.png) no-repeat, 
+                    url(../img/happyplanet.png) no-repeat; 
+        
+        background-position:	left 15% top 99%, 
+                                center bottom, 
+                                right 12% top 15%, 
+                                top left;
+                            }
+                            
+   
+}
+
+

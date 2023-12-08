@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Exactly&reg;</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i%7CMontserrat:400,400i,700,700i" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/styles.css">
+
+	<link rel="icon" href="../icons/favicon.ico" type="image/x-icon">
+
+	<link rel="icon" href="../icons/favicon-32x32.png" type="image/png">
+
+	<script src="../script/menu.js" defer="defer"></script>
+
+
+</head>
+<body>
+
+	<div id="wrapper">
+	
+		<header>
+			<div id="top-bar">
+				<button class="btn-menu"><span>&#9776;</span></button>
+				<nav>
+					<ul class="nav-ul">
+                        <li class="nav-li"><a class="nav-link" href="../html/index.html">Home</a></li>
+						<li class="nav-li"><a class="nav-link" href="../html/aboutme.html">About</a></li>
+						
+						<li class="nav-li dropdown">
+							<a class="nav-link" href="#0">Blogs</a>
+							<div class="dropdown-content">
+								<ul class="nav-ul">
+									<li class="nav-li"><a class="nav-link" href="../html/blog1.html">Blog 1</a></li>
+									<li class="nav-li"><a class="nav-link" href="../html/blog2.html">Blog 2</a></li>
+									<li class="nav-li"><a class="nav-link" href="../html/lorem.html">Blog 3</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-li"><a class="nav-link" href="../html/contactme.html">Contact</a></li>
+						<li>
+							<form class="search-container" action="/action_page.php">
+								<input type="text" placeholder="Search.." name="search">
+						
+					  </form>
+						</li>
+								
+							<li>
+								<ul class="nav-ul socialmedia">
+								<li class="nav-li"><a class="nav-link" href="#0"><span class="hide">Linkedin</span><img class="icons" src="../icons/icons8-linkedin-48.png" alt="icon"></a></li>
+								<li class="nav-li"><a class="nav-link" href="#0"><span class="hide">Instagram</span><img class="icons" src="../icons/icons8-instagram-48.png" alt="icon"></a></li>
+								<li class="nav-li"><a class="nav-link" href="#0"><span class="hide">Facebook</span><img class="icons" src="../icons/icons8-facebook-48.png" alt="icon"></a></li>
+								<li class="nav-li"><a class="nav-link" href="#0"><span class="hide">twitter</span><img class="icons" src="../icons/icons8-twitter-48.png" alt="icon"></a></li>
+								</ul>
+						</li>
+							
+						
+					</ul>
+				</nav>			
+				<img id="logoimg" src="../img/Exactly-logos_transparent.png" alt="logo">
+				<figure class="maria">
+					<img src="../img/MariaNowakowska-logos_black.png" alt="name">
+					<figcaption>
+						Salesforce Marketing Cloud Solution Architect
+					</figcaption>
+				</figure>				
+			</div>			
+	</header>
+
+
+
+	<main>
+<div class="narrowizer">
+	<h1>Implementing BIMI: Boosting Email Trust and Deliverability</h1>
+	<div class="process2">
+	<article>
+		
+		<p>Email remains one of the most widely used and effective digital marketing channels. However, with the rise of phishing attacks and email impersonation, 
+			establishing trust and ensuring email deliverability has become increasingly challenging for marketers. 
+			This is where BIMI (Brand Indicators for Message Identification) comes into play. 
+			In this article, we will explore how to implement BIMI in Salesforce Marketing Cloud and discuss the numerous benefits it brings to email marketing campaigns</p>
+		
+			<h2>What is BIMI?</h2>
+			<p>
+				BIMI is an emerging email verification protocol created by industry leaders, including the AuthIndicators Working Group and the Brand Indicator Group. 
+				It helps organizations authenticate their emails and display their brand logos alongside their messages in supporting email clients.
+			</p>
+			
+			<h2>Implementing BIMI in Salesforce Marketing Cloud:</h2>	
+		
+			<h3>Authenticate your domain:</h3>
+			
+			<p>Configure Salesforce Marketing Cloud:
+				The first step in implementing BIMI in Salesforce Marketing Cloud is to ensure that your domain has proper authentication protocols in place. SPF (Sender Policy Framework), DKIM (DomainKeys Identified Mail),
+				and DMARC (Domain-based Message Authentication, Reporting & Conformance) are essential authentication techniques that help validate the authenticity of email domains.
+			</p>
+			
+			<h3>Register your brand's logo:</h3>
+			   <p>
+				To display your brand's logo in supported email clients, you need to register it with a Verified Mark Certificate (VMC) authority. VMC authorities validate your brand's ownership and authenticity, ensuring that only legitimate senders can display your logo. Once approved, your logo will be stored on a blockchain ledger.
+				Next, you'll need to configure Salesforce Marketing Cloud to include the necessary BIMI attributes in the emails you send. This involves adding the correct DNS TXT record to your domain and modifying the email header to provide the necessary BIMI details.
+		
+			   </p>
+		
+	</article>
+   
+	<article>
+		<h2>Benefits of BIMI:</h2>
+
+    <h3>Enhanced brand visibility:</h3>
+
+    <p>
+        By implementing BIMI, your brand logo will be prominently displayed alongside your email messages in supporting email clients.
+         This consistent brand presence helps improve brand recognition and recall value among your recipients, resulting in enhanced engagement and increased click-through rates.
+    </p>
+
+    <h3>Increased email deliverability:</h3>
+
+    <p>
+        Using BIMI, you demonstrate to email service providers (ESPs) and receiving mail servers that your emails are authentic and trustworthy. 
+        This improves your sender reputation and increases the chances of your emails reaching the intended recipients' inboxes, avoiding spam folders.
+    </p>
+
+    <h3>Enhanced email security:</h3>
+    <p>
+        Phishing attacks often take advantage of email impersonation. With BIMI, recipients can quickly identify legitimate emails from your brand, as your logo is displayed alongside the message. 
+        This reduces the risk of recipients falling victim to fraudulent emails and helps establish trust between your brand and recipients.
+    </p>
+
+    
+
+    <h3>Improved customer trust:</h3>
+
+    <p>
+        Displaying your brand logo via BIMI establishes a visual trust indicator, reassuring recipients that the email they received is genuinely from your brand. This transparency builds trust and credibility, helping to nurture long-term relationships with customers.
+
+    </p>
+
+    <h2>Conclusion:</h2>
+
+    <p>Implementing BIMI in Salesforce Marketing Cloud empowers organizations to leverage the benefits of enhanced brand visibility, increased email deliverability, and improved customer trust. By following the prescribed steps and integrating BIMI into your email marketing strategy,
+        you can amplify the impact of your campaigns while safeguarding your brand reputation against phishing attacks. Embrace BIMI and gain a competitive edge in the digital marketing realm.</p>
+	<img src="../img/salesforce_logo_(clearbkgrnd).webp" alt="salesforce">
+	</article>
+</div>
+    
+</div>        
+
+        </main>
+	<<footer>
+		
+			
+		<div class="footer-image">
+			<img class="footerimg" src="../img/Exactly-logos_transparent.png" alt="logo">
+		</div>
+		
+		<div class="footer-socials">
+			<h2>Socials</h2>
+			<ul class="footersocials">
+
+				<li class="nav-li"><a href="#0"><img class="icons2" src="../icons/icons8-linkedin-48.png" alt="icon"></a></li>
+				<li class="nav-li"><a href="#0"><img class="icons2" src="../icons/icons8-instagram-48.png" alt="icon"></a></li>
+				<li class="nav-li"><a href="#0"><img class="icons2" src="../icons/icons8-facebook-48.png" alt="icon"></a></li>
+				<li class="nav-li"><a href="#0"><img class="icons2" src="../icons/icons8-twitter-48.png" alt="icon"></a></li>
+			</ul>
+			
+		</div>
+		<div class=footerfiller ></div>
+		
+	
+</footer>
+
+<div class="footer-copyright">
+	<p> 2023 Exactly&reg;</p>
+</div>
+	
+</div>
+
+
+
+</body>
+</html>

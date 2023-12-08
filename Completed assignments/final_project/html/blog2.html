@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Exactly&reg;</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i%7CMontserrat:400,400i,700,700i" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/styles.css">
+
+	<link rel="icon" href="../icons/favicon.ico" type="image/x-icon">
+
+	<link rel="icon" href="../icons/favicon-32x32.png" type="image/png">
+
+	<script src="../script/menu.js" defer="defer"></script>
+
+
+</head>
+<body>
+
+	<div id="wrapper">
+	
+		<header>
+			<div id="top-bar">
+				<button class="btn-menu"><span>&#9776;</span></button>
+				<nav>
+					<ul class="nav-ul">
+                        <li class="nav-li"><a class="nav-link" href="../html/index.html">Home</a></li>
+						<li class="nav-li"><a class="nav-link" href="../html/aboutme.html">About</a></li>
+						
+						<li class="nav-li dropdown">
+							<a class="nav-link" href="#0">Blogs</a>
+							<div class="dropdown-content">
+								<ul class="nav-ul">
+									<li class="nav-li"><a class="nav-link" href="../html/blog1.html">Blog 1</a></li>
+									<li class="nav-li"><a class="nav-link" href="../html/blog2.html">Blog 2</a></li>
+									<li class="nav-li"><a class="nav-link" href="../html/lorem.html">Blog 3</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-li"><a class="nav-link" href="../html/contactme.html">Contact</a></li>
+						<li>
+							<form class="search-container" action="/action_page.php">
+								<input type="text" placeholder="Search.." name="search">
+						
+					  </form>
+						</li>
+								
+							<li>
+								<ul class="nav-ul socialmedia">
+								<li class="nav-li"><a class="nav-link" href="#0"><span class="hide">Linkedin</span><img class="icons" src="../icons/icons8-linkedin-48.png" alt="icon"></a></li>
+								<li class="nav-li"><a class="nav-link" href="#0"><span class="hide">Instagram</span><img class="icons" src="../icons/icons8-instagram-48.png" alt="icon"></a></li>
+								<li class="nav-li"><a class="nav-link" href="#0"><span class="hide">Facebook</span><img class="icons" src="../icons/icons8-facebook-48.png" alt="icon"></a></li>
+								<li class="nav-li"><a class="nav-link" href="#0"><span class="hide">twitter</span><img class="icons" src="../icons/icons8-twitter-48.png" alt="icon"></a></li>
+								</ul>
+						</li>
+							
+						
+					</ul>
+				</nav>			
+				<img id="logoimg" src="../img/Exactly-logos_transparent.png" alt="logo">
+				<figure class="maria">
+					<img src="../img/MariaNowakowska-logos_black.png" alt="name">
+					<figcaption>
+						Salesforce Marketing Cloud Solution Architect
+					</figcaption>
+				</figure>				
+			</div>			
+	</header>
+
+
+
+	<main>
+        <div class="narrowizer">
+			<h1>Deleting Contacts from Salesforce Marketing Cloud</h1>
+			<article class="blog2">
+				
+
+				<p>
+					Salesforce Marketing Cloud is a powerful platform that enables businesses to manage their marketing campaigns and engage with customers effectively. 
+					However, organizations may often find the need to remove certain contacts from their database for various reasons. 
+					In this article, we'll explore how to efficiently delete contacts from Salesforce Marketing Cloud using Script Activity and Server-Side JavaScript (SSJS).
+				</p>
+		
+				<h2>Understanding Script Activity</h2>
+				<p>Script Activity allows users to execute custom codes within Salesforce Marketing Cloud to carry out specific tasks. 
+					It is a versatile tool that integrates SSJS, AMPscript, and other scripting languages. 
+					By utilizing Script Activity, we can automate the process of deleting contacts from the database. You can achieve this by following the steps below:
+				</p>
+			</article>
+				
+			<ol>
+				<li> 
+					<h3> Accessing Automation Studio</h3> <p>To begin, access Automation Studio in Salesforce Marketing Cloud. Automation Studio is an application that provides a workflow engine to automate and manage various marketing processes.
+					 Here, we can create and schedule activities, including Script Activities.</p>
+		
+				</li>
+				<li> 
+					<h3> Creating a Script Activity</h3>
+					<p>Within Automation Studio, create a new Script Activity by selecting "Create Activity" and then choosing "Script Activity." Provide a suitable name and description for the activity to easily identify it later.</p>
+				
+				</li>
+				<li>
+					<h3> Writing the SSJS Code</h3> 
+					<p>In the Script Activity configuration, navigate to the "Code" tab.
+						Here, you can write the SSJS code needed to delete contacts. Below is an example code snippet:</p> 
+		
+						<div class="code-box">
+							<code>
+								<span class="keyword">&lt;script runat="server"&gt;</span>
+								<span class="platform">Platform.Load("Core","1")</span>;
+								
+								<span class="string">var</span> contactsToDelete = <span class="parentheses">[</span>"contactKey1", "contactKey2", "contactKey3"<span class="parentheses">]</span>;
+								<span class="string">var</span> apiEndpoint = <span class="string">"https://YOUR_SUBDOMAIN.rest.marketingcloudapis.com/address/v1/contacts/delete"</span>;
+								
+								<span class="string">for</span>(<span class="parentheses">var i=0; i<span class="keyword">&lt;</span>contactsToDelete.length; i++</span>){
+									<span class="keyword">var</span> restResponse = HTTP.Delete(apiEndpoint + <span class="string">"?key="</span> + contactsToDelete[i]);
+									Write(restResponse.Content);
+								}
+								<span class="keyword">&lt;/script&gt;</span>
+							</code>
+						</div>
+		
+					<p>In the code snippet, contactsToDelete represents an array containing the contact keys of the contacts to be deleted. Replace the sample contact keys with the actual ones you wish to remove from the Salesforce Marketing Cloud.
+							apiEndpoint defines the REST API endpoint used for performing delete operations. Ensure you replace "YOUR_SUBDOMAIN" with your Marketing Cloud subdomain.</p>
+					<p>
+								The for loop cycles through each contact key within the contactsToDelete array and sends a DELETE request to the API endpoint. The response is then written to the console.
+					</p>                  
+				</li>
+				<li><h3> Executing the Script Activity</h3>
+					<p>Once you've written the code, save and run the Script Activity. It will initiate the process of deleting the specified contacts from the Salesforce Marketing Cloud database</p>
+		
+				</li>
+			</ol>
+			<article class="blog2" >
+				<h2>Conclusion</h2>
+				<p>By utilizing Script Activity and SSJS, businesses can efficiently delete contacts from Salesforce Marketing Cloud. 
+				The customizable nature of Script Activity allows for automating various processes, saving time and effort. 
+				Remember to exercise caution while deleting contacts, as the action cannot be undone.</p>
+				<img class="salesforcepic" src="../img/salesforce_logo_(clearbkgrnd).webp" alt="salesforce">
+			</article>
+			
+			
+            
+    
+        </div>
+        
+	</main>
+	<footer>
+		
+			
+		<div class="footer-image">
+			<img class="footerimg" src="../img/Exactly-logos_transparent.png" alt="logo">
+		</div>
+		
+		<div class="footer-socials">
+			<h2>Socials</h2>
+			<ul class="footersocials">
+
+				<li class="nav-li"><a href="#0"><img class="icons2" src="../icons/icons8-linkedin-48.png" alt="icon"></a></li>
+				<li class="nav-li"><a href="#0"><img class="icons2" src="../icons/icons8-instagram-48.png" alt="icon"></a></li>
+				<li class="nav-li"><a href="#0"><img class="icons2" src="../icons/icons8-facebook-48.png" alt="icon"></a></li>
+				<li class="nav-li"><a href="#0"><img class="icons2" src="../icons/icons8-twitter-48.png" alt="icon"></a></li>
+			</ul>
+			
+		</div>
+		<div class=footerfiller ></div>
+		
+	
+</footer>
+
+<div class="footer-copyright">
+	<p> 2023 Exactly&reg;</p>
+</div>
+	
+
+</div>
+
+
+
+</body>
+</html>

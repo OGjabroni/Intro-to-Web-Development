@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+	<!--Stephen Crocker	-->
+	<head>
+		<!--  -->
+		<title>HTML elements | COMP1850</title>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="../CSS/style.css">
+
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<img src="../img/MiloBloom.jpg" class="header-image">
+				<h1 id="top">HTML elements for COMP1850</h1>
+				
+				<nav>
+					<ul>
+						<li><a href="../CSS Properties/index.html">CSS properties</a></li>
+
+					</ul>
+				</nav>
+			
+			</header>
+		
+			<article>
+""
+				<section>
+					<h2> Using the &lt;address&gt; tag</h2>
+					<p> The <<a href="https://www.tutorialrepublic.com/html-reference/html-address-tag.php">&lt;address&gt;</a>> tag.</p>
+
+					<p>The &lt;address&gt; tag in HTML is used to define contact information for the author or owner of a webpage, 
+						or for the person or organization responsible for a specific section of content within a webpage.
+						It typically appears within the &lt;footer&gt; or at the end of an article, but it can be used in other appropriate contexts as well.</p>
+
+					<p>Here's the basic syntax for the &lt;address&gt; tag:</p>
+						
+						
+					<figure>
+						<img src="../img/Screenshot 2023-10-02 201934.jpg">
+					</figure>		
+									
+				
+						
+
+					<p>You can customize the content within the &lt;address&gt; tag to include any relevant contact information or details that you want to display on your web page. 
+						It's important to note that the &lt;address&gt; tag is a semantic HTML element, which means it adds meaning and structure to your web content,
+							 making it more accessible and understandable to humans, screen readers and search engines.</p>	
+
+						
+				</section>
+
+				<section>
+					
+					<h2>Using the &lt;hr&gt; tag</h2>
+					
+					<p>The <a href="https://www.tutorialrepublic.com/html-reference/html-hr-tag.php">&lt;hr&gt;</a> tag</p>
+					
+					<p>	The &lt;hr&gt; tag in HTML stands for "horizontal rule," and it is used to create a thematic break or a horizontal line within a web page to visually separate content.
+						It's often used to divide sections of content or to indicate a change in topic. 
+						The &lt;hr&gt;  tag is an empty, self-closing tag, which means it doesn't have a closing tag.</p>
+						<hr>
+					
+						<p>You can also add attributes to the &lt;hr&gt; tag to control its appearance and behavior. Some common attributes include:</p>
+						<ul>
+							<li>Width: Specifies the width of the horizontal rule.</li>
+							<li>Size: Sets the thickness or height of the line.</li>
+							<li>Color: Defines the color of the line</li>
+						</ul>
+						<p>For example:</p>
+
+						<pre>
+							<code>
+								&lt;hr width="50%" size="2" color="blue"&gt;
+							</code>
+						</pre>
+						
+						<p>would creat a horizontal line that looks like this</p>
+						
+						<hr width="50%" size="2px" color="red">
+
+					<p> The visual appearance of the &lt;hr&gt; tag can be further customized using CSS styles if you want more control over its appearance. I used inline CSS here to emphasize the lineyness happening here</p>
+					
+					<hr style="color:blue; background-color: blue; height: 2px; border: none;">
+						
+						
+				</section>
+
+			</article>	
+
+			<aside>
+
+				<img src="../img/Billthecat.jpg" alt="ack">
+				<p>Is art today more crude than in the past?  </p>
+				
+			</aside>
+			
+			<article>
+
+				<section>
+					
+					<h2> Using the&lt;del&gt; tag </h2>
+
+					<p> The <a href="https://www.tutorialrepublic.com/html-reference/html-del-tag.php">&lt;del&gt;</a> tag.</p>
+					
+					<p>The &lt;del&gt; tag in HTML is used to represent deleted or removed text within a document. It is typically used in conjunction with the &lt;ins&gt; tag, which represents inserted or added text. 
+						It does require an opening and a closing tag.
+						The &lt;del&gt; tag is useful for indicating changes or revisions to a document, such as in version histories or collaborative editing environments.</p>
+
+					<p>	Here's a breakdown of how to use it:
+						Opening &lt;del&gt; tag: &lt;del&gt;is the opening tag, and it marks the beginning of the deleted text.
+						Deleted text: Place the text you want to indicate as deleted between the opening &lt;del&gt; and closing &lt;del&gt; tags.
+						Closing &lt;del&gt; tag: &lt;del&gt; is the closing tag, and it marks the end of the deleted text.
+						When rendered in a web browser, the text enclosed within the &lt;del&gt; tags usually appear with a strikethrough, 
+						indicating that it has been removed or deleted from the original content as if crossed off from paper</p>	
+
+						<p>Heres a list of things</p>
+						<ul>
+							<li><del>old problems</del></li>
+							<li><ins>new problems</ins></li> <!-- the <ins> causes underlines to appear which I understand is a nono generally -->
+							<li><del>explaining &lt;del&gt; tags</del></li>
+						</ul>
+					<p>You can also add additional information to &lt;del&gt; tags as the attributes 'datetime' 'cite' to specify when or why things were modified.</p>	
+						
+				</section>
+		
+			</article>
+
+			<p><a href="#top">Back to the top</a></p>
+		
+	
+		<footer>
+			<address>
+				<!-- Stephen Crocker -->
+				<p>Stephen Crocker</p>
+				<p><a href="stvcrocker@gmail.com">stvcrocker@gmail.com</a></p>
+				<p>The Amazing Brentwood</p>
+				<p>Beautiful Burnaby, Big British Columbia L0B 8O8</p>
+				<p>COMP1850</p>
+			</address>
+		</footer>
+		</div>
+	</body>
+</html>
+
+
